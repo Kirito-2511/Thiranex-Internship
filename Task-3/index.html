@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TaskFlow — Smart To-Do List App</title>
+  <meta name="description" content="TaskFlow is a premium, interactive to-do list application with priorities, categories, due dates, drag-and-drop reordering, and beautiful dark/light themes." />
+  <meta property="og:title" content="TaskFlow — Smart To-Do List App" />
+  <meta property="og:description" content="A polished productivity app built with vanilla HTML, CSS, and JavaScript. Manage tasks with priorities, categories, due dates, and more." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=1200&q=80" />
+  <meta name="theme-color" content="#7c3aed" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Animated Background -->
+  <div class="bg-mesh" aria-hidden="true">
+    <div class="bg-blob bg-blob--1"></div>
+    <div class="bg-blob bg-blob--2"></div>
+    <div class="bg-blob bg-blob--3"></div>
+  </div>
+
+  <div class="app-wrapper">
+    <!-- Header -->
+    <header class="app-header" role="banner">
+      <div class="header-top">
+        <div class="brand">
+          <span class="brand-icon" aria-hidden="true">⚡</span>
+          <h1 class="brand-name">TaskFlow</h1>
+        </div>
+        <div class="header-actions">
+          <button class="btn-icon theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+            <span class="theme-icon" aria-hidden="true">🌙</span>
+          </button>
+        </div>
+      </div>
+      <p class="header-subtitle">Organize your day, conquer your goals</p>
+
+      <!-- Progress Bar -->
+      <div class="progress-section" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Task completion progress">
+        <div class="progress-info">
+          <span class="progress-label" id="progressLabel">0 of 0 tasks completed</span>
+          <span class="progress-percent" id="progressPercent">0%</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+        </div>
+      </div>
+    </header>
+
+    <main class="app-main" role="main">
+      <!-- Add Task Section -->
+      <section class="add-task-section" aria-label="Add new task">
+        <form class="add-task-form" id="addTaskForm" autocomplete="off">
+          <div class="input-row">
+            <div class="input-wrapper">
+              <span class="input-icon" aria-hidden="true">✏️</span>
+              <input
+                type="text"
+                class="task-input"
+                id="taskInput"
+                placeholder="What needs to be done?"
+                aria-label="New task description"
+                maxlength="200"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-primary add-btn" aria-label="Add task">
+              <span aria-hidden="true">➕</span> Add
+            </button>
+          </div>
+
+          <!-- Task Options Row -->
+          <div class="options-row">
+            <div class="option-group">
+              <label for="prioritySelect" class="option-label">🔥 Priority</label>
+              <select id="prioritySelect" class="option-select" aria-label="Task priority">
+                <option value="low">Low</option>
+                <option value="medium" selected>Medium</option>
+                <option value="high">High</option>
+              </select>
+            </div>
+            <div class="option-group">
+              <label for="dueDateInput" class="option-label">📅 Due Date</label>
+              <input type="date" id="dueDateInput" class="option-date" aria-label="Task due date" />
+            </div>
+            <div class="option-group">
+              <label for="categorySelect" class="option-label">🏷️ Category</label>
+              <select id="categorySelect" class="option-select" aria-label="Task category">
+                <option value="">None</option>
+                <option value="work">💼 Work</option>
+                <option value="personal">🏠 Personal</option>
+                <option value="health">💪 Health</option>
+                <option value="learning">📚 Learning</option>
+                <option value="finance">💰 Finance</option>
+                <option value="errands">🛒 Errands</option>
+              </select>
+            </div>
+          </div>
+        </form>
+      </section>
+
+      <!-- Search & Filter Bar -->
+      <section class="toolbar" aria-label="Task filters and search">
+        <div class="search-wrapper">
+          <span class="search-icon" aria-hidden="true">🔍</span>
+          <input
+            type="search"
+            class="search-input"
+            id="searchInput"
+            placeholder="Search tasks..."
+            aria-label="Search tasks"
+          />
+        </div>
+        <nav class="filter-tabs" role="tablist" aria-label="Task status filters">
+          <button class="filter-tab active" role="tab" aria-selected="true" data-filter="all">All</button>
+          <button class="filter-tab" role="tab" aria-selected="false" data-filter="active">Active</button>
+          <button class="filter-tab" role="tab" aria-selected="false" data-filter="completed">Completed</button>
+        </nav>
+      </section>
+
+      <!-- Task List -->
+      <section class="task-list-section" aria-label="Task list">
+        <ul class="task-list" id="taskList" role="list" aria-label="Tasks">
+          <!-- Tasks rendered here by JS -->
+        </ul>
+
+        <!-- Empty State -->
+        <div class="empty-state" id="emptyState" aria-live="polite">
+          <div class="empty-illustration" aria-hidden="true">
+            <span class="empty-emoji">📋</span>
+            <span class="empty-sparkle empty-sparkle--1">✨</span>
+            <span class="empty-sparkle empty-sparkle--2">⭐</span>
+            <span class="empty-sparkle empty-sparkle--3">🌟</span>
+          </div>
+          <h2 class="empty-title">No tasks yet!</h2>
+          <p class="empty-text">Add your first task above and start being productive.</p>
+        </div>
+      </section>
+
+      <!-- Footer Actions -->
+      <footer class="app-footer" role="contentinfo">
+        <div class="footer-info">
+          <span class="task-counter" id="taskCounter" aria-live="polite">0 items left</span>
+        </div>
+        <div class="footer-actions">
+          <button class="btn btn-ghost clear-btn" id="clearCompleted" aria-label="Clear all completed tasks">
+            🧹 Clear Completed
+          </button>
+        </div>
+      </footer>
+    </main>
+
+    <p class="app-credit">Built with ❤️ using vanilla HTML, CSS &amp; JS — Thiranex Internship Task 3</p>
+  </div>
+
+  <!-- Delete Confirmation Modal -->
+  <div class="modal-overlay" id="deleteModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal-card">
+      <div class="modal-icon" aria-hidden="true">🗑️</div>
+      <h2 class="modal-title" id="modalTitle">Delete Task?</h2>
+      <p class="modal-text" id="modalText">Are you sure you want to delete this task? This action cannot be undone.</p>
+      <div class="modal-actions">
+        <button class="btn btn-ghost" id="modalCancel">Cancel</button>
+        <button class="btn btn-danger" id="modalConfirm">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
