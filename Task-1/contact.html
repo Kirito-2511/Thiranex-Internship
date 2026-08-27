@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Alex Morgan</title>
+  <meta name="description" content="Get in touch with Alex Morgan for project inquiries or collaboration.">
+</head>
+<body>
+
+  <!-- Skip Link for Accessibility -->
+  <a href="#main-content">Skip to main content</a>
+
+  <!-- Header / Navigation -->
+  <header role="banner">
+    <nav aria-label="Primary navigation">
+      <a href="index.html" aria-label="Alex Morgan Home">
+        <strong>Alex Morgan</strong>
+      </a>
+
+      <ul role="menubar">
+        <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+        <li role="none"><a href="about.html" role="menuitem">About</a></li>
+        <li role="none"><a href="projects.html" role="menuitem">Projects</a></li>
+        <li role="none"><a href="contact.html" role="menuitem" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    
+    <section aria-labelledby="contact-heading">
+      <h1 id="contact-heading">Get in Touch</h1>
+      <p>Have a question or want to work together? Fill out the form below or reach me directly.</p>
+      
+      <!-- Accessibility Note: Forms should have properly linked labels -->
+      <form action="#" method="POST" aria-label="Contact Form">
+        
+        <fieldset>
+          <legend>Personal Information</legend>
+          
+          <div>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required aria-required="true">
+          </div>
+
+          <div>
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required aria-required="true">
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Message</legend>
+
+          <div>
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required aria-required="true">
+          </div>
+
+          <div>
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+          </div>
+        </fieldset>
+
+        <button type="submit">Send Message</button>
+      </form>
+
+      <!-- Additional Contact Info -->
+      <aside aria-labelledby="contact-info-heading">
+        <h2 id="contact-info-heading">Other Ways to Connect</h2>
+        <address>
+          <p>Email: <a href="mailto:hello@alexmorgan.dev">hello@alexmorgan.dev</a></p>
+          <p>Location: San Francisco, CA</p>
+        </address>
+      </aside>
+
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer role="contentinfo">
+    <nav aria-label="Social media">
+      <ul>
+        <li><a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">GitHub</a></li>
+        <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">LinkedIn</a></li>
+      </ul>
+    </nav>
+    <p>&copy; 2026 Alex Morgan. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
