@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Alex Morgan | Full-Stack Developer</title>
+  <meta name="description" content="Browse Alex Morgan's portfolio of web development projects spanning e-commerce, SaaS, mobile apps, and open-source tools." />
+  <meta property="og:title" content="Projects — Alex Morgan" />
+  <meta property="og:description" content="A curated collection of full-stack projects and creative builds." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=630&fit=crop" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Animated Background Mesh -->
+  <div class="bg-mesh" aria-hidden="true">
+    <div class="blob blob--1"></div>
+    <div class="blob blob--2"></div>
+    <div class="blob blob--3"></div>
+  </div>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="header" role="banner">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a href="index.html" class="nav__logo" aria-label="Alex Morgan Home">
+        <span class="nav__logo-icon">⚡</span>
+        <span class="nav__logo-text">Alex<span class="accent">Morgan</span></span>
+      </a>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
+        <span class="hamburger"></span>
+      </button>
+      <ul class="nav__menu" id="navMenu" role="menubar">
+        <li role="none"><a href="index.html" class="nav__link" role="menuitem">🏠 Home</a></li>
+        <li role="none"><a href="about.html" class="nav__link" role="menuitem">👤 About</a></li>
+        <li role="none"><a href="projects.html" class="nav__link" role="menuitem" aria-current="page">💼 Projects</a></li>
+        <li role="none"><a href="contact.html" class="nav__link" role="menuitem">✉️ Contact</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <span class="theme-toggle__icon" aria-hidden="true">🌙</span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- Page Hero -->
+    <section class="page-hero" aria-labelledby="projects-heading">
+      <div class="container">
+        <span class="section__badge scroll-reveal">💼 Portfolio</span>
+        <h1 id="projects-heading" class="page-hero__title scroll-reveal">My <span class="gradient-text">Projects</span></h1>
+        <p class="page-hero__subtitle scroll-reveal">A collection of projects I've built — from full-stack apps to creative experiments.</p>
+      </div>
+    </section>
+
+    <!-- Filter & Gallery -->
+    <section class="gallery section" aria-labelledby="gallery-heading">
+      <div class="container">
+        <h2 id="gallery-heading" class="sr-only">Project Gallery</h2>
+
+        <!-- Filter Buttons -->
+        <div class="filter-bar scroll-reveal" role="toolbar" aria-label="Filter projects by category">
+          <button class="filter-btn active" data-filter="all" aria-pressed="true">🔥 All Projects</button>
+          <button class="filter-btn" data-filter="frontend" aria-pressed="false">🎨 Frontend</button>
+          <button class="filter-btn" data-filter="fullstack" aria-pressed="false">⚡ Full-Stack</button>
+          <button class="filter-btn" data-filter="mobile" aria-pressed="false">📱 Mobile</button>
+          <button class="filter-btn" data-filter="opensource" aria-pressed="false">🌐 Open Source</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="gallery__grid" id="projectsGrid">
+          <!-- Project 1 -->
+          <article class="project-card glass-card scroll-reveal" data-category="fullstack" aria-labelledby="gp1-title">
+            <div class="project-card__image-wrapper">
+              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=375&fit=crop" alt="E-Commerce Platform dashboard" class="project-card__image" width="600" height="375" loading="lazy" />
+              <div class="project-card__overlay">
+                <a href="#" class="btn btn--small btn--primary">Live Demo →</a>
+                <a href="#" class="btn btn--small btn--outline">GitHub 🐙</a>
+              </div>
+            </div>
+            <div class="project-card__content">
+              <div class="project-card__tags"><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">MongoDB</span></div>
+              <h3 id="gp1-title" class="project-card__title">E-Commerce Platform</h3>
+              <p class="project-card__desc">Full-stack e-commerce with real-time inventory, Stripe payments, and admin analytics dashboard.</p>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card glass-card scroll-reveal" data-category="fullstack" aria-labelledby="gp2-title">
+            <div class="project-card__image-wrapper">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=375&fit=crop" alt="SaaS Analytics Dashboard" class="project-card__image" width="600" height="375" loading="lazy" />
+              <div class="project-card__overlay">
+                <a href="#" class="btn btn--small btn--primary">Live Demo →</a>
+                <a href="#" class="btn btn--small btn--outline">GitHub 🐙</a>
+              </div>
+            </div>
+            <div class="project-card__content">
+              <div class="project-card__tags"><span class="tag">Next.js</span><span class="tag">TypeScript</span><span class="tag">D3.js</span></div>
+              <h3 id="gp2-title" class="project-card__title">SaaS Analytics Dashboard</h3>
+              <p class="project-card__desc">Real-time analytics with interactive charts, user segmentation, and automated reporting.</p>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card glass-card scroll-reveal" data-category="mobile" aria-labelledby="gp3-title">
+            <div class="project-card__image-wrapper">
+              <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=375&fit=crop" alt="Social Media App" class="project-card__image" width="600" height="375" loading="lazy" />
+              <div class="project-card__overlay">
+                <a href="#" class="btn btn--small btn--primary">Live Demo →</a>
+                <a href="#" class="btn btn--small btn--outline">GitHub 🐙</a>
+              </div>
+            </div>
+            <div class="project-card__content">
+              <div class="project-card__tags"><span class="tag">React Native</span><span class="tag">Firebase</span><span class="tag">Redux</span></div>
+              <h3 id="gp3-title" class="project-card__title">Social Media App</h3>
+              <p class="project-card__desc">Cross-platform mobile app with real-time chat, stories, and AI-powered content recommendations.</p>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card glass-card scroll-reveal" data-category="frontend" aria-labelledby="gp4-title">
+            <div class="project-card__image-wrapper">
+              <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=600&h=375&fit=crop" alt="Portfolio Website template" class="project-card__image" width="600" height="375" loading="lazy" />
+              <div class="project-card__overlay">
+                <a href="#" class="btn btn--small btn--primary">Live Demo →</a>
+                <a href="#" class="btn btn--small btn--outline">GitHub 🐙</a>
+              </div>
+            </div>
+            <div class="project-card__content">
+              <div class="project-card__tags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span></div>
+              <h3 id="gp4-title" class="project-card__title">Creative Portfolio Template</h3>
+              <p class="project-card__desc">Award-winning portfolio template with glassmorphism, micro-animations, and theme switching.</p>
+            </div>
+          </article>
+
+          <!-- Project 5 -->
+          <article class="project-card glass-card scroll-reveal" data-category="opensource" aria-labelledby="gp5-title">
+            <div class="project-card__image-wrapper">
+              <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=375&fit=crop" alt="Open source CLI tool code" class="project-card__image" width="600" height="375" loading="lazy" />
+              <div class="project-card__overlay">
+                <a href="#" class="btn btn--small btn--primary">NPM Package →</a>
+                <a href="#" class="btn btn--small btn--outline">GitHub 🐙</a>
+              </div>
+            </div>
+            <div class="project-card__content">
+              <div class="project-card__tags"><span class="tag">Node.js</span><span class="tag">CLI</span><span class="tag">Open Source</span></div>
+              <h3 id="gp5-title" class="project-card__title">DevFlow CLI</h3>
+              <p class="project-card__desc">A developer productivity CLI tool with project scaffolding, git workflows, and deployment automation. 2K+ GitHub stars.</p>
+            </div>
+          </article>
+
+          <!-- Project 6 -->
+          <article class="project-card glass-card scroll-reveal" data-category="frontend" aria-labelledby="gp6-title">
+            <div class="project-card__image-wrapper">
+              <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&h=375&fit=crop" alt="Weather dashboard with maps" class="project-card__image" width="600" height="375" loading="lazy" />
+              <div class="project-card__overlay">
+                <a href="#" class="btn btn--small btn--primary">Live Demo →</a>
+                <a href="#" class="btn btn--small btn--outline">GitHub 🐙</a>
+              </div>
+            </div>
+            <div class="project-card__content">
+              <div class="project-card__tags"><span class="tag">Vue.js</span><span class="tag">OpenWeather API</span><span class="tag">Mapbox</span></div>
+              <h3 id="gp6-title" class="project-card__title">Weather Dashboard</h3>
+              <p class="project-card__desc">Beautiful weather app with 7-day forecast, interactive maps, air quality index, and location-based alerts.</p>
+            </div>
+          </article>
+
+          <!-- Project 7 -->
+          <article class="project-card glass-card scroll-reveal" data-category="fullstack" aria-labelledby="gp7-title">
+            <div class="project-card__image-wrapper">
+              <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=375&fit=crop" alt="Task management application" class="project-card__image" width="600" height="375" loading="lazy" />
+              <div class="project-card__overlay">
+                <a href="#" class="btn btn--small btn--primary">Live Demo →</a>
+                <a href="#" class="btn btn--small btn--outline">GitHub 🐙</a>
+              </div>
+            </div>
+            <div class="project-card__content">
+              <div class="project-card__tags"><span class="tag">React</span><span class="tag">GraphQL</span><span class="tag">PostgreSQL</span></div>
+              <h3 id="gp7-title" class="project-card__title">TaskFlow Pro</h3>
+              <p class="project-card__desc">Project management tool with Kanban boards, time tracking, team collaboration, and automated workflows.</p>
+            </div>
+          </article>
+
+          <!-- Project 8 -->
+          <article class="project-card glass-card scroll-reveal" data-category="mobile" aria-labelledby="gp8-title">
+            <div class="project-card__image-wrapper">
+              <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=600&h=375&fit=crop" alt="Fitness tracking app" class="project-card__image" width="600" height="375" loading="lazy" />
+              <div class="project-card__overlay">
+                <a href="#" class="btn btn--small btn--primary">App Store →</a>
+                <a href="#" class="btn btn--small btn--outline">GitHub 🐙</a>
+              </div>
+            </div>
+            <div class="project-card__content">
+              <div class="project-card__tags"><span class="tag">Flutter</span><span class="tag">Dart</span><span class="tag">Firebase</span></div>
+              <h3 id="gp8-title" class="project-card__title">FitTrack Mobile</h3>
+              <p class="project-card__desc">Cross-platform fitness app with workout logging, nutrition tracking, progress charts, and social challenges.</p>
+            </div>
+          </article>
+
+          <!-- Project 9 -->
+          <article class="project-card glass-card scroll-reveal" data-category="opensource" aria-labelledby="gp9-title">
+            <div class="project-card__image-wrapper">
+              <img src="https://images.unsplash.com/photo-1550439062-609e1531270e?w=600&h=375&fit=crop" alt="Design system component library" class="project-card__image" width="600" height="375" loading="lazy" />
+              <div class="project-card__overlay">
+                <a href="#" class="btn btn--small btn--primary">Docs →</a>
+                <a href="#" class="btn btn--small btn--outline">GitHub 🐙</a>
+              </div>
+            </div>
+            <div class="project-card__content">
+              <div class="project-card__tags"><span class="tag">React</span><span class="tag">Storybook</span><span class="tag">TypeScript</span></div>
+              <h3 id="gp9-title" class="project-card__title">NexusUI Component Library</h3>
+              <p class="project-card__desc">Open-source React component library with 50+ accessible, themeable components. Used by 500+ projects.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta section" aria-labelledby="proj-cta-heading">
+      <div class="container">
+        <div class="cta__card glass-card scroll-reveal">
+          <h2 id="proj-cta-heading" class="cta__title">Have a Project Idea?</h2>
+          <p class="cta__text">Let's collaborate and turn your vision into reality. I'm available for freelance work and full-time opportunities.</p>
+          <div class="cta__actions">
+            <a href="contact.html" class="btn btn--primary btn--lg">Get In Touch →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__grid container">
+      <div class="footer__brand">
+        <a href="index.html" class="nav__logo" aria-label="Alex Morgan Home">
+          <span class="nav__logo-icon">⚡</span>
+          <span class="nav__logo-text">Alex<span class="accent">Morgan</span></span>
+        </a>
+        <p class="footer__tagline">Crafting digital experiences that inspire and perform.</p>
+      </div>
+      <div class="footer__links">
+        <h3 class="footer__heading">Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__links">
+        <h3 class="footer__heading">Connect</h3>
+        <ul>
+          <li><a href="https://github.com" target="_blank" rel="noopener noreferrer">🐙 GitHub</a></li>
+          <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">💼 LinkedIn</a></li>
+          <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer">🐦 Twitter</a></li>
+          <li><a href="https://dribbble.com" target="_blank" rel="noopener noreferrer">🏀 Dribbble</a></li>
+        </ul>
+      </div>
+      <div class="footer__newsletter">
+        <h3 class="footer__heading">Stay Updated</h3>
+        <p>Get notified about my latest projects and articles.</p>
+        <form class="footer__form" aria-label="Newsletter signup">
+          <input type="email" placeholder="your@email.com" aria-label="Email address" required />
+          <button type="submit" class="btn btn--primary btn--small">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer__bottom container">
+      <p>&copy; 2026 Alex Morgan. All rights reserved.</p>
+      <p>Designed & Built with ❤️ and ☕</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

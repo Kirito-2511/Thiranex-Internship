@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Alex Morgan | Full-Stack Developer</title>
+  <meta name="description" content="Learn about Alex Morgan's journey, tech stack, experience, and education. A passionate full-stack developer with 5+ years of experience." />
+  <meta property="og:title" content="About — Alex Morgan" />
+  <meta property="og:description" content="Discover my journey, skills, and what drives me as a developer." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=630&fit=crop" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Animated Background Mesh -->
+  <div class="bg-mesh" aria-hidden="true">
+    <div class="blob blob--1"></div>
+    <div class="blob blob--2"></div>
+    <div class="blob blob--3"></div>
+  </div>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="header" role="banner">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a href="index.html" class="nav__logo" aria-label="Alex Morgan Home">
+        <span class="nav__logo-icon">⚡</span>
+        <span class="nav__logo-text">Alex<span class="accent">Morgan</span></span>
+      </a>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
+        <span class="hamburger"></span>
+      </button>
+      <ul class="nav__menu" id="navMenu" role="menubar">
+        <li role="none"><a href="index.html" class="nav__link" role="menuitem">🏠 Home</a></li>
+        <li role="none"><a href="about.html" class="nav__link" role="menuitem" aria-current="page">👤 About</a></li>
+        <li role="none"><a href="projects.html" class="nav__link" role="menuitem">💼 Projects</a></li>
+        <li role="none"><a href="contact.html" class="nav__link" role="menuitem">✉️ Contact</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <span class="theme-toggle__icon" aria-hidden="true">🌙</span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- Page Hero -->
+    <section class="page-hero" aria-labelledby="about-heading">
+      <div class="container">
+        <span class="section__badge scroll-reveal">👤 About Me</span>
+        <h1 id="about-heading" class="page-hero__title scroll-reveal">The Story Behind<br />the <span class="gradient-text">Code</span></h1>
+        <p class="page-hero__subtitle scroll-reveal">Passionate developer, lifelong learner, and design enthusiast.</p>
+      </div>
+    </section>
+
+    <!-- Bio Section -->
+    <section class="about-bio section" aria-labelledby="bio-heading">
+      <div class="container">
+        <div class="about-bio__grid">
+          <div class="about-bio__image-col scroll-reveal">
+            <div class="about-bio__image-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=600&fit=crop"
+                alt="Alex Morgan in a professional setting"
+                class="about-bio__image"
+                width="500"
+                height="600"
+                loading="eager"
+              />
+              <div class="about-bio__image-accent" aria-hidden="true"></div>
+            </div>
+          </div>
+          <div class="about-bio__content-col scroll-reveal">
+            <h2 id="bio-heading" class="about-bio__title">Hello! I'm Alex 👋</h2>
+            <p class="about-bio__text">
+              I'm a full-stack developer based in San Francisco with over 5 years of experience building digital products. I specialize in creating beautiful, performant web applications that solve real-world problems.
+            </p>
+            <p class="about-bio__text">
+              My journey into tech started when I built my first website at 14 — a fan page for my favorite video game. Since then, I've been hooked on the magic of turning ideas into interactive experiences.
+            </p>
+            <p class="about-bio__text">
+              When I'm not coding, you'll find me hiking in the Bay Area trails, experimenting with coffee brewing methods, or contributing to open-source projects.
+            </p>
+            <div class="about-bio__quick-facts">
+              <div class="quick-fact glass-card">
+                <span class="quick-fact__icon" aria-hidden="true">📍</span>
+                <div>
+                  <span class="quick-fact__label">Location</span>
+                  <span class="quick-fact__value">San Francisco, CA</span>
+                </div>
+              </div>
+              <div class="quick-fact glass-card">
+                <span class="quick-fact__icon" aria-hidden="true">💼</span>
+                <div>
+                  <span class="quick-fact__label">Experience</span>
+                  <span class="quick-fact__value">5+ Years</span>
+                </div>
+              </div>
+              <div class="quick-fact glass-card">
+                <span class="quick-fact__icon" aria-hidden="true">🎓</span>
+                <div>
+                  <span class="quick-fact__label">Degree</span>
+                  <span class="quick-fact__value">B.S. Computer Science</span>
+                </div>
+              </div>
+              <div class="quick-fact glass-card">
+                <span class="quick-fact__icon" aria-hidden="true">🌐</span>
+                <div>
+                  <span class="quick-fact__label">Languages</span>
+                  <span class="quick-fact__value">English, Spanish</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section class="tech-stack section" aria-labelledby="tech-heading">
+      <div class="container">
+        <div class="section__header scroll-reveal">
+          <span class="section__badge">🧰 Tech Stack</span>
+          <h2 id="tech-heading" class="section__title">Technologies I Love</h2>
+          <p class="section__subtitle">The tools and frameworks I use to bring ideas to life.</p>
+        </div>
+        <div class="tech-stack__grid">
+          <div class="tech-card glass-card scroll-reveal" role="article">
+            <span class="tech-card__icon" aria-hidden="true">⚛️</span>
+            <h3 class="tech-card__title">React</h3>
+            <p class="tech-card__desc">Component-driven UIs with hooks, context, and server components.</p>
+          </div>
+          <div class="tech-card glass-card scroll-reveal" role="article">
+            <span class="tech-card__icon" aria-hidden="true">🔺</span>
+            <h3 class="tech-card__title">Next.js</h3>
+            <p class="tech-card__desc">Full-stack React framework with SSR, ISR, and edge functions.</p>
+          </div>
+          <div class="tech-card glass-card scroll-reveal" role="article">
+            <span class="tech-card__icon" aria-hidden="true">🟢</span>
+            <h3 class="tech-card__title">Node.js</h3>
+            <p class="tech-card__desc">Scalable server-side applications with Express and Fastify.</p>
+          </div>
+          <div class="tech-card glass-card scroll-reveal" role="article">
+            <span class="tech-card__icon" aria-hidden="true">🐍</span>
+            <h3 class="tech-card__title">Python</h3>
+            <p class="tech-card__desc">Django, FastAPI, data analysis, and automation scripts.</p>
+          </div>
+          <div class="tech-card glass-card scroll-reveal" role="article">
+            <span class="tech-card__icon" aria-hidden="true">🍃</span>
+            <h3 class="tech-card__title">MongoDB</h3>
+            <p class="tech-card__desc">NoSQL database design with aggregation pipelines.</p>
+          </div>
+          <div class="tech-card glass-card scroll-reveal" role="article">
+            <span class="tech-card__icon" aria-hidden="true">🐘</span>
+            <h3 class="tech-card__title">PostgreSQL</h3>
+            <p class="tech-card__desc">Relational database with complex queries and migrations.</p>
+          </div>
+          <div class="tech-card glass-card scroll-reveal" role="article">
+            <span class="tech-card__icon" aria-hidden="true">🐳</span>
+            <h3 class="tech-card__title">Docker</h3>
+            <p class="tech-card__desc">Containerized deployments with Docker Compose and Kubernetes.</p>
+          </div>
+          <div class="tech-card glass-card scroll-reveal" role="article">
+            <span class="tech-card__icon" aria-hidden="true">☁️</span>
+            <h3 class="tech-card__title">AWS</h3>
+            <p class="tech-card__desc">Cloud infrastructure with S3, Lambda, EC2, and CloudFront.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section class="timeline-section section" aria-labelledby="experience-heading">
+      <div class="container">
+        <div class="section__header scroll-reveal">
+          <span class="section__badge">📈 Journey</span>
+          <h2 id="experience-heading" class="section__title">Experience & Education</h2>
+          <p class="section__subtitle">My professional path and academic background.</p>
+        </div>
+        <div class="timeline" role="list" aria-label="Experience and Education timeline">
+          <!-- Timeline Item 1 -->
+          <div class="timeline__item scroll-reveal" role="listitem">
+            <div class="timeline__marker" aria-hidden="true">
+              <span>💼</span>
+            </div>
+            <div class="timeline__content glass-card">
+              <span class="timeline__date">2023 — Present</span>
+              <h3 class="timeline__title">Senior Full-Stack Developer</h3>
+              <span class="timeline__company">TechNova Inc.</span>
+              <p class="timeline__desc">Lead a team of 6 developers building a SaaS analytics platform. Architected microservices handling 10M+ daily requests. Reduced page load times by 60%.</p>
+              <div class="timeline__tags">
+                <span class="tag">React</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">AWS</span>
+                <span class="tag">PostgreSQL</span>
+              </div>
+            </div>
+          </div>
+          <!-- Timeline Item 2 -->
+          <div class="timeline__item scroll-reveal" role="listitem">
+            <div class="timeline__marker" aria-hidden="true">
+              <span>💼</span>
+            </div>
+            <div class="timeline__content glass-card">
+              <span class="timeline__date">2021 — 2023</span>
+              <h3 class="timeline__title">Full-Stack Developer</h3>
+              <span class="timeline__company">CloudScale Solutions</span>
+              <p class="timeline__desc">Built and maintained 12+ client-facing web applications. Implemented CI/CD pipelines reducing deployment time by 80%. Mentored 3 junior developers.</p>
+              <div class="timeline__tags">
+                <span class="tag">Next.js</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">MongoDB</span>
+                <span class="tag">Docker</span>
+              </div>
+            </div>
+          </div>
+          <!-- Timeline Item 3 -->
+          <div class="timeline__item scroll-reveal" role="listitem">
+            <div class="timeline__marker" aria-hidden="true">
+              <span>💼</span>
+            </div>
+            <div class="timeline__content glass-card">
+              <span class="timeline__date">2019 — 2021</span>
+              <h3 class="timeline__title">Frontend Developer</h3>
+              <span class="timeline__company">PixelPerfect Agency</span>
+              <p class="timeline__desc">Designed and developed responsive websites for 20+ clients across various industries. Specialized in animations, accessibility, and performance optimization.</p>
+              <div class="timeline__tags">
+                <span class="tag">React</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">GSAP</span>
+                <span class="tag">Figma</span>
+              </div>
+            </div>
+          </div>
+          <!-- Timeline Item 4 - Education -->
+          <div class="timeline__item scroll-reveal" role="listitem">
+            <div class="timeline__marker timeline__marker--edu" aria-hidden="true">
+              <span>🎓</span>
+            </div>
+            <div class="timeline__content glass-card">
+              <span class="timeline__date">2015 — 2019</span>
+              <h3 class="timeline__title">B.S. Computer Science</h3>
+              <span class="timeline__company">Stanford University</span>
+              <p class="timeline__desc">Graduated Magna Cum Laude with a focus on software engineering and human-computer interaction. President of the Web Development Club.</p>
+              <div class="timeline__tags">
+                <span class="tag">Algorithms</span>
+                <span class="tag">HCI</span>
+                <span class="tag">Machine Learning</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta section" aria-labelledby="about-cta-heading">
+      <div class="container">
+        <div class="cta__card glass-card scroll-reveal">
+          <h2 id="about-cta-heading" class="cta__title">Interested in Working Together?</h2>
+          <p class="cta__text">I'm always looking for new challenges and opportunities to create something impactful.</p>
+          <div class="cta__actions">
+            <a href="contact.html" class="btn btn--primary btn--lg">Let's Talk →</a>
+            <a href="projects.html" class="btn btn--outline btn--lg">See My Work 💼</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__grid container">
+      <div class="footer__brand">
+        <a href="index.html" class="nav__logo" aria-label="Alex Morgan Home">
+          <span class="nav__logo-icon">⚡</span>
+          <span class="nav__logo-text">Alex<span class="accent">Morgan</span></span>
+        </a>
+        <p class="footer__tagline">Crafting digital experiences that inspire and perform.</p>
+      </div>
+      <div class="footer__links">
+        <h3 class="footer__heading">Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__links">
+        <h3 class="footer__heading">Connect</h3>
+        <ul>
+          <li><a href="https://github.com" target="_blank" rel="noopener noreferrer">🐙 GitHub</a></li>
+          <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">💼 LinkedIn</a></li>
+          <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer">🐦 Twitter</a></li>
+          <li><a href="https://dribbble.com" target="_blank" rel="noopener noreferrer">🏀 Dribbble</a></li>
+        </ul>
+      </div>
+      <div class="footer__newsletter">
+        <h3 class="footer__heading">Stay Updated</h3>
+        <p>Get notified about my latest projects and articles.</p>
+        <form class="footer__form" aria-label="Newsletter signup">
+          <input type="email" placeholder="your@email.com" aria-label="Email address" required />
+          <button type="submit" class="btn btn--primary btn--small">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer__bottom container">
+      <p>&copy; 2026 Alex Morgan. All rights reserved.</p>
+      <p>Designed & Built with ❤️ and ☕</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

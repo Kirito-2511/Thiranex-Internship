@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alex Morgan — Full-Stack Developer & Designer</title>
+  <meta name="description" content="Alex Morgan is a full-stack developer crafting stunning digital experiences with modern web technologies. View projects, skills, and get in touch." />
+  <meta property="og:title" content="Alex Morgan — Full-Stack Developer & Designer" />
+  <meta property="og:description" content="Crafting stunning digital experiences with modern web technologies." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=630&fit=crop" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Animated Background Mesh -->
+  <div class="bg-mesh" aria-hidden="true">
+    <div class="blob blob--1"></div>
+    <div class="blob blob--2"></div>
+    <div class="blob blob--3"></div>
+  </div>
+
+  <!-- Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header / Navigation -->
+  <header class="header" role="banner">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a href="index.html" class="nav__logo" aria-label="Alex Morgan Home">
+        <span class="nav__logo-icon">⚡</span>
+        <span class="nav__logo-text">Alex<span class="accent">Morgan</span></span>
+      </a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
+        <span class="hamburger"></span>
+      </button>
+
+      <ul class="nav__menu" id="navMenu" role="menubar">
+        <li role="none"><a href="index.html" class="nav__link" role="menuitem" aria-current="page">🏠 Home</a></li>
+        <li role="none"><a href="about.html" class="nav__link" role="menuitem">👤 About</a></li>
+        <li role="none"><a href="projects.html" class="nav__link" role="menuitem">💼 Projects</a></li>
+        <li role="none"><a href="contact.html" class="nav__link" role="menuitem">✉️ Contact</a></li>
+      </ul>
+
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <span class="theme-toggle__icon" aria-hidden="true">🌙</span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero__grid container">
+        <div class="hero__content">
+          <span class="hero__badge scroll-reveal">👋 Welcome to my portfolio</span>
+          <h1 id="hero-heading" class="hero__title scroll-reveal">
+            I'm Alex Morgan,<br />
+            <span class="hero__typed" id="typedText" aria-label="Full-Stack Developer"></span>
+            <span class="hero__cursor" aria-hidden="true">|</span>
+          </h1>
+          <p class="hero__subtitle scroll-reveal">
+            I craft pixel-perfect, performant web applications with modern technologies. Passionate about clean code, elegant UI, and seamless user experiences.
+          </p>
+          <div class="hero__actions scroll-reveal">
+            <a href="projects.html" class="btn btn--primary">
+              <span>View My Work</span>
+              <span aria-hidden="true">→</span>
+            </a>
+            <a href="contact.html" class="btn btn--outline">
+              <span>Get In Touch</span>
+              <span aria-hidden="true">💬</span>
+            </a>
+          </div>
+          <div class="hero__stats scroll-reveal">
+            <div class="stat">
+              <span class="stat__number" data-count="50">0</span><span class="stat__suffix">+</span>
+              <span class="stat__label">Projects Delivered</span>
+            </div>
+            <div class="stat">
+              <span class="stat__number" data-count="30">0</span><span class="stat__suffix">+</span>
+              <span class="stat__label">Happy Clients</span>
+            </div>
+            <div class="stat">
+              <span class="stat__number" data-count="5">0</span><span class="stat__suffix">+</span>
+              <span class="stat__label">Years Experience</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero__visual scroll-reveal">
+          <div class="hero__avatar-wrapper">
+            <img
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop"
+              alt="Alex Morgan — Full-Stack Developer portrait photo"
+              class="hero__avatar"
+              width="400"
+              height="400"
+              loading="eager"
+            />
+            <div class="hero__avatar-ring" aria-hidden="true"></div>
+            <!-- Floating Badges -->
+            <span class="floating-badge floating-badge--1" aria-hidden="true">⚛️ React</span>
+            <span class="floating-badge floating-badge--2" aria-hidden="true">🟢 Node.js</span>
+            <span class="floating-badge floating-badge--3" aria-hidden="true">🎨 CSS3</span>
+            <span class="floating-badge floating-badge--4" aria-hidden="true">🐍 Python</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero__scroll-indicator" aria-hidden="true">
+        <span>Scroll Down</span>
+        <div class="scroll-arrow"></div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills section" aria-labelledby="skills-heading">
+      <div class="container">
+        <div class="section__header scroll-reveal">
+          <span class="section__badge">🛠️ My Expertise</span>
+          <h2 id="skills-heading" class="section__title">Skills & Technologies</h2>
+          <p class="section__subtitle">A deep dive into my technical toolkit and proficiency levels.</p>
+        </div>
+        <div class="skills__grid">
+          <!-- Skill Card 1 -->
+          <div class="skill-card glass-card scroll-reveal" role="article">
+            <div class="skill-card__header">
+              <span class="skill-card__icon" aria-hidden="true">🌐</span>
+              <div>
+                <h3 class="skill-card__title">HTML5 & CSS3</h3>
+                <span class="skill-card__level">Expert</span>
+              </div>
+            </div>
+            <div class="progress" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" aria-label="HTML5 & CSS3 proficiency 95%">
+              <div class="progress__bar" data-width="95"></div>
+            </div>
+            <span class="skill-card__percent">95%</span>
+          </div>
+          <!-- Skill Card 2 -->
+          <div class="skill-card glass-card scroll-reveal" role="article">
+            <div class="skill-card__header">
+              <span class="skill-card__icon" aria-hidden="true">⚡</span>
+              <div>
+                <h3 class="skill-card__title">JavaScript / TypeScript</h3>
+                <span class="skill-card__level">Advanced</span>
+              </div>
+            </div>
+            <div class="progress" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="JavaScript proficiency 90%">
+              <div class="progress__bar" data-width="90"></div>
+            </div>
+            <span class="skill-card__percent">90%</span>
+          </div>
+          <!-- Skill Card 3 -->
+          <div class="skill-card glass-card scroll-reveal" role="article">
+            <div class="skill-card__header">
+              <span class="skill-card__icon" aria-hidden="true">⚛️</span>
+              <div>
+                <h3 class="skill-card__title">React & Next.js</h3>
+                <span class="skill-card__level">Advanced</span>
+              </div>
+            </div>
+            <div class="progress" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100" aria-label="React proficiency 88%">
+              <div class="progress__bar" data-width="88"></div>
+            </div>
+            <span class="skill-card__percent">88%</span>
+          </div>
+          <!-- Skill Card 4 -->
+          <div class="skill-card glass-card scroll-reveal" role="article">
+            <div class="skill-card__header">
+              <span class="skill-card__icon" aria-hidden="true">🟢</span>
+              <div>
+                <h3 class="skill-card__title">Node.js & Express</h3>
+                <span class="skill-card__level">Advanced</span>
+              </div>
+            </div>
+            <div class="progress" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="Node.js proficiency 85%">
+              <div class="progress__bar" data-width="85"></div>
+            </div>
+            <span class="skill-card__percent">85%</span>
+          </div>
+          <!-- Skill Card 5 -->
+          <div class="skill-card glass-card scroll-reveal" role="article">
+            <div class="skill-card__header">
+              <span class="skill-card__icon" aria-hidden="true">🐍</span>
+              <div>
+                <h3 class="skill-card__title">Python & Django</h3>
+                <span class="skill-card__level">Intermediate</span>
+              </div>
+            </div>
+            <div class="progress" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" aria-label="Python proficiency 78%">
+              <div class="progress__bar" data-width="78"></div>
+            </div>
+            <span class="skill-card__percent">78%</span>
+          </div>
+          <!-- Skill Card 6 -->
+          <div class="skill-card glass-card scroll-reveal" role="article">
+            <div class="skill-card__header">
+              <span class="skill-card__icon" aria-hidden="true">🗄️</span>
+              <div>
+                <h3 class="skill-card__title">Databases & DevOps</h3>
+                <span class="skill-card__level">Intermediate</span>
+              </div>
+            </div>
+            <div class="progress" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="Databases proficiency 80%">
+              <div class="progress__bar" data-width="80"></div>
+            </div>
+            <span class="skill-card__percent">80%</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section class="projects section" aria-labelledby="projects-heading">
+      <div class="container">
+        <div class="section__header scroll-reveal">
+          <span class="section__badge">🚀 Featured Work</span>
+          <h2 id="projects-heading" class="section__title">Recent Projects</h2>
+          <p class="section__subtitle">A selection of my most impactful and visually stunning projects.</p>
+        </div>
+        <div class="projects__grid">
+          <!-- Project Card 1 -->
+          <article class="project-card glass-card scroll-reveal" aria-labelledby="proj1-title">
+            <div class="project-card__image-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=375&fit=crop"
+                alt="Screenshot of E-Commerce Platform dashboard showing analytics"
+                class="project-card__image"
+                width="600"
+                height="375"
+                loading="lazy"
+              />
+              <div class="project-card__overlay">
+                <a href="#" class="btn btn--small btn--primary" aria-label="View live demo of E-Commerce Platform">Live Demo →</a>
+              </div>
+            </div>
+            <div class="project-card__content">
+              <div class="project-card__tags" aria-label="Technologies used">
+                <span class="tag">React</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">MongoDB</span>
+              </div>
+              <h3 id="proj1-title" class="project-card__title">E-Commerce Platform</h3>
+              <p class="project-card__desc">Full-stack e-commerce solution with real-time inventory, Stripe payments, and admin analytics dashboard.</p>
+            </div>
+          </article>
+          <!-- Project Card 2 -->
+          <article class="project-card glass-card scroll-reveal" aria-labelledby="proj2-title">
+            <div class="project-card__image-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=375&fit=crop"
+                alt="Screenshot of SaaS Analytics Dashboard with data visualizations"
+                class="project-card__image"
+                width="600"
+                height="375"
+                loading="lazy"
+              />
+              <div class="project-card__overlay">
+                <a href="#" class="btn btn--small btn--primary" aria-label="View live demo of SaaS Analytics Dashboard">Live Demo →</a>
+              </div>
+            </div>
+            <div class="project-card__content">
+              <div class="project-card__tags" aria-label="Technologies used">
+                <span class="tag">Next.js</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">D3.js</span>
+              </div>
+              <h3 id="proj2-title" class="project-card__title">SaaS Analytics Dashboard</h3>
+              <p class="project-card__desc">Real-time analytics dashboard with interactive charts, user segmentation, and automated reporting.</p>
+            </div>
+          </article>
+          <!-- Project Card 3 -->
+          <article class="project-card glass-card scroll-reveal" aria-labelledby="proj3-title">
+            <div class="project-card__image-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=375&fit=crop"
+                alt="Screenshot of Social Media App interface with feed and messaging"
+                class="project-card__image"
+                width="600"
+                height="375"
+                loading="lazy"
+              />
+              <div class="project-card__overlay">
+                <a href="#" class="btn btn--small btn--primary" aria-label="View live demo of Social Media App">Live Demo →</a>
+              </div>
+            </div>
+            <div class="project-card__content">
+              <div class="project-card__tags" aria-label="Technologies used">
+                <span class="tag">React Native</span>
+                <span class="tag">Firebase</span>
+                <span class="tag">Redux</span>
+              </div>
+              <h3 id="proj3-title" class="project-card__title">Social Media App</h3>
+              <p class="project-card__desc">Cross-platform mobile app with real-time chat, stories, and AI-powered content recommendations.</p>
+            </div>
+          </article>
+        </div>
+        <div class="projects__cta scroll-reveal">
+          <a href="projects.html" class="btn btn--primary">View All Projects →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials section" aria-labelledby="testimonials-heading">
+      <div class="container">
+        <div class="section__header scroll-reveal">
+          <span class="section__badge">💬 Client Love</span>
+          <h2 id="testimonials-heading" class="section__title">What People Say</h2>
+          <p class="section__subtitle">Don't just take my word for it — hear from those I've worked with.</p>
+        </div>
+        <div class="testimonials__grid">
+          <!-- Testimonial 1 -->
+          <blockquote class="testimonial-card glass-card scroll-reveal" aria-label="Testimonial from Sarah Chen, CEO at TechStart">
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</div>
+            <p class="testimonial-card__text">"Alex delivered our platform ahead of schedule with incredible attention to detail. The UI is absolutely stunning and our users love it. Highly recommend!"</p>
+            <footer class="testimonial-card__author">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=60&h=60&fit=crop" alt="Sarah Chen portrait" class="testimonial-card__avatar" width="60" height="60" loading="lazy" />
+              <div>
+                <cite class="testimonial-card__name">Sarah Chen</cite>
+                <span class="testimonial-card__role">CEO, TechStart</span>
+              </div>
+            </footer>
+          </blockquote>
+          <!-- Testimonial 2 -->
+          <blockquote class="testimonial-card glass-card scroll-reveal" aria-label="Testimonial from Marcus Rivera, CTO at DataFlow">
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</div>
+            <p class="testimonial-card__text">"Working with Alex was a game-changer. They took our vague concept and turned it into a beautiful, functional product. The code quality is exceptional."</p>
+            <footer class="testimonial-card__author">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop" alt="Marcus Rivera portrait" class="testimonial-card__avatar" width="60" height="60" loading="lazy" />
+              <div>
+                <cite class="testimonial-card__name">Marcus Rivera</cite>
+                <span class="testimonial-card__role">CTO, DataFlow</span>
+              </div>
+            </footer>
+          </blockquote>
+          <!-- Testimonial 3 -->
+          <blockquote class="testimonial-card glass-card scroll-reveal" aria-label="Testimonial from Emily Park, Founder at DesignLab">
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</div>
+            <p class="testimonial-card__text">"The most talented developer I've worked with. Alex's ability to translate designs into pixel-perfect code is unmatched. Our conversion rate doubled!"</p>
+            <footer class="testimonial-card__author">
+              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&h=60&fit=crop" alt="Emily Park portrait" class="testimonial-card__avatar" width="60" height="60" loading="lazy" />
+              <div>
+                <cite class="testimonial-card__name">Emily Park</cite>
+                <span class="testimonial-card__role">Founder, DesignLab</span>
+              </div>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta section" aria-labelledby="cta-heading">
+      <div class="container">
+        <div class="cta__card glass-card scroll-reveal">
+          <h2 id="cta-heading" class="cta__title">Let's Build Something Amazing Together</h2>
+          <p class="cta__text">Have a project in mind? I'm always open to discussing new opportunities and creative ideas.</p>
+          <div class="cta__actions">
+            <a href="contact.html" class="btn btn--primary btn--lg">Start a Conversation →</a>
+            <a href="mailto:alex@alexmorgan.dev" class="btn btn--outline btn--lg">📧 alex@alexmorgan.dev</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__grid container">
+      <div class="footer__brand">
+        <a href="index.html" class="nav__logo" aria-label="Alex Morgan Home">
+          <span class="nav__logo-icon">⚡</span>
+          <span class="nav__logo-text">Alex<span class="accent">Morgan</span></span>
+        </a>
+        <p class="footer__tagline">Crafting digital experiences that inspire and perform.</p>
+      </div>
+      <div class="footer__links">
+        <h3 class="footer__heading">Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__links">
+        <h3 class="footer__heading">Connect</h3>
+        <ul>
+          <li><a href="https://github.com" target="_blank" rel="noopener noreferrer">🐙 GitHub</a></li>
+          <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">💼 LinkedIn</a></li>
+          <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer">🐦 Twitter</a></li>
+          <li><a href="https://dribbble.com" target="_blank" rel="noopener noreferrer">🏀 Dribbble</a></li>
+        </ul>
+      </div>
+      <div class="footer__newsletter">
+        <h3 class="footer__heading">Stay Updated</h3>
+        <p>Get notified about my latest projects and articles.</p>
+        <form class="footer__form" aria-label="Newsletter signup">
+          <input type="email" placeholder="your@email.com" aria-label="Email address" required />
+          <button type="submit" class="btn btn--primary btn--small">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer__bottom container">
+      <p>&copy; 2026 Alex Morgan. All rights reserved.</p>
+      <p>Designed & Built with ❤️ and ☕</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

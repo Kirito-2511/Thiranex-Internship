@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Alex Morgan | Full-Stack Developer</title>
+  <meta name="description" content="Get in touch with Alex Morgan for freelance projects, collaborations, or job opportunities. Let's build something great together." />
+  <meta property="og:title" content="Contact — Alex Morgan" />
+  <meta property="og:description" content="Let's connect and discuss your next project." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=630&fit=crop" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Animated Background Mesh -->
+  <div class="bg-mesh" aria-hidden="true">
+    <div class="blob blob--1"></div>
+    <div class="blob blob--2"></div>
+    <div class="blob blob--3"></div>
+  </div>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="header" role="banner">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a href="index.html" class="nav__logo" aria-label="Alex Morgan Home">
+        <span class="nav__logo-icon">⚡</span>
+        <span class="nav__logo-text">Alex<span class="accent">Morgan</span></span>
+      </a>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
+        <span class="hamburger"></span>
+      </button>
+      <ul class="nav__menu" id="navMenu" role="menubar">
+        <li role="none"><a href="index.html" class="nav__link" role="menuitem">🏠 Home</a></li>
+        <li role="none"><a href="about.html" class="nav__link" role="menuitem">👤 About</a></li>
+        <li role="none"><a href="projects.html" class="nav__link" role="menuitem">💼 Projects</a></li>
+        <li role="none"><a href="contact.html" class="nav__link" role="menuitem" aria-current="page">✉️ Contact</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <span class="theme-toggle__icon" aria-hidden="true">🌙</span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- Page Hero -->
+    <section class="page-hero" aria-labelledby="contact-heading">
+      <div class="container">
+        <span class="section__badge scroll-reveal">✉️ Get In Touch</span>
+        <h1 id="contact-heading" class="page-hero__title scroll-reveal">Let's Start a <span class="gradient-text">Conversation</span></h1>
+        <p class="page-hero__subtitle scroll-reveal">Whether you have a project idea or just want to say hi, I'd love to hear from you.</p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" aria-labelledby="contact-form-heading">
+      <div class="container">
+        <div class="contact__grid">
+          <!-- Contact Form -->
+          <div class="contact__form-col scroll-reveal">
+            <h2 id="contact-form-heading" class="contact__title">Send Me a Message</h2>
+            <form class="contact-form" id="contactForm" novalidate aria-label="Contact form">
+              <div class="form-group">
+                <label for="name" class="form-label">Full Name <span class="required" aria-label="required">*</span></label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="John Doe" required autocomplete="name" aria-describedby="name-error" />
+                <span class="form-error" id="name-error" role="alert"></span>
+              </div>
+              <div class="form-group">
+                <label for="email" class="form-label">Email Address <span class="required" aria-label="required">*</span></label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="john@example.com" required autocomplete="email" aria-describedby="email-error" />
+                <span class="form-error" id="email-error" role="alert"></span>
+              </div>
+              <div class="form-group">
+                <label for="subject" class="form-label">Subject <span class="required" aria-label="required">*</span></label>
+                <select id="subject" name="subject" class="form-input form-select" required aria-describedby="subject-error">
+                  <option value="" disabled selected>Choose a topic...</option>
+                  <option value="freelance">💼 Freelance Project</option>
+                  <option value="fulltime">🏢 Full-time Opportunity</option>
+                  <option value="collaboration">🤝 Collaboration</option>
+                  <option value="general">💬 General Inquiry</option>
+                </select>
+                <span class="form-error" id="subject-error" role="alert"></span>
+              </div>
+              <div class="form-group">
+                <label for="budget" class="form-label">Budget Range</label>
+                <select id="budget" name="budget" class="form-input form-select">
+                  <option value="" disabled selected>Select budget range...</option>
+                  <option value="under5k">Under $5,000</option>
+                  <option value="5k-10k">$5,000 — $10,000</option>
+                  <option value="10k-25k">$10,000 — $25,000</option>
+                  <option value="25k+">$25,000+</option>
+                </select>
+              </div>
+              <div class="form-group form-group--full">
+                <label for="message" class="form-label">Message <span class="required" aria-label="required">*</span></label>
+                <textarea id="message" name="message" class="form-input form-textarea" placeholder="Tell me about your project..." rows="6" required aria-describedby="message-error"></textarea>
+                <span class="form-error" id="message-error" role="alert"></span>
+              </div>
+              <button type="submit" class="btn btn--primary btn--lg btn--full" id="submitBtn">
+                <span>Send Message</span>
+                <span aria-hidden="true">🚀</span>
+              </button>
+              <div class="form-success" id="formSuccess" role="status" aria-live="polite" hidden>
+                <span class="form-success__icon" aria-hidden="true">✅</span>
+                <h3 class="form-success__title">Message Sent Successfully!</h3>
+                <p class="form-success__text">Thank you for reaching out. I'll get back to you within 24 hours.</p>
+              </div>
+            </form>
+          </div>
+
+          <!-- Contact Info Sidebar -->
+          <aside class="contact__info-col scroll-reveal" aria-label="Contact information">
+            <div class="contact-info glass-card">
+              <h3 class="contact-info__title">Contact Information</h3>
+              <p class="contact-info__text">Feel free to reach out through any of these channels. I typically respond within 24 hours.</p>
+
+              <ul class="contact-info__list">
+                <li class="contact-info__item">
+                  <span class="contact-info__icon" aria-hidden="true">📧</span>
+                  <div>
+                    <span class="contact-info__label">Email</span>
+                    <a href="mailto:alex@alexmorgan.dev" class="contact-info__value">alex@alexmorgan.dev</a>
+                  </div>
+                </li>
+                <li class="contact-info__item">
+                  <span class="contact-info__icon" aria-hidden="true">📱</span>
+                  <div>
+                    <span class="contact-info__label">Phone</span>
+                    <a href="tel:+14155551234" class="contact-info__value">+1 (415) 555-1234</a>
+                  </div>
+                </li>
+                <li class="contact-info__item">
+                  <span class="contact-info__icon" aria-hidden="true">📍</span>
+                  <div>
+                    <span class="contact-info__label">Location</span>
+                    <span class="contact-info__value">San Francisco, CA</span>
+                  </div>
+                </li>
+                <li class="contact-info__item">
+                  <span class="contact-info__icon" aria-hidden="true">🕐</span>
+                  <div>
+                    <span class="contact-info__label">Availability</span>
+                    <span class="contact-info__value contact-info__value--available">🟢 Open for projects</span>
+                  </div>
+                </li>
+              </ul>
+
+              <div class="contact-info__social">
+                <h4 class="contact-info__social-title">Follow Me</h4>
+                <div class="social-links">
+                  <a href="https://github.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">🐙</a>
+                  <a href="https://linkedin.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">💼</a>
+                  <a href="https://twitter.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Twitter profile">🐦</a>
+                  <a href="https://dribbble.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Dribbble profile">🏀</a>
+                  <a href="https://codepen.io" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="CodePen profile">✏️</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Map placeholder -->
+            <div class="contact-map glass-card" aria-label="Location map">
+              <div class="contact-map__placeholder">
+                <span class="contact-map__pin" aria-hidden="true">📍</span>
+                <span>San Francisco, CA</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq section" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="section__header scroll-reveal">
+          <span class="section__badge">❓ FAQ</span>
+          <h2 id="faq-heading" class="section__title">Frequently Asked Questions</h2>
+          <p class="section__subtitle">Quick answers to common questions about working with me.</p>
+        </div>
+        <div class="faq__grid">
+          <div class="accordion scroll-reveal" role="list" aria-label="Frequently asked questions">
+            <!-- FAQ 1 -->
+            <div class="accordion__item glass-card" role="listitem">
+              <button class="accordion__trigger" aria-expanded="false" aria-controls="faq1-content" id="faq1-trigger">
+                <span class="accordion__title">What's your typical project timeline?</span>
+                <span class="accordion__icon" aria-hidden="true">+</span>
+              </button>
+              <div class="accordion__content" id="faq1-content" role="region" aria-labelledby="faq1-trigger" hidden>
+                <p>Most projects take 4-12 weeks depending on complexity. A simple landing page can be done in 1-2 weeks, while a full SaaS application typically requires 8-12 weeks. I provide detailed timelines during the discovery phase.</p>
+              </div>
+            </div>
+            <!-- FAQ 2 -->
+            <div class="accordion__item glass-card" role="listitem">
+              <button class="accordion__trigger" aria-expanded="false" aria-controls="faq2-content" id="faq2-trigger">
+                <span class="accordion__title">What is your development process?</span>
+                <span class="accordion__icon" aria-hidden="true">+</span>
+              </button>
+              <div class="accordion__content" id="faq2-content" role="region" aria-labelledby="faq2-trigger" hidden>
+                <p>I follow an agile methodology: Discovery → Design → Development → Testing → Launch → Support. You'll receive regular updates, staging deployments, and have full visibility into progress via shared project boards.</p>
+              </div>
+            </div>
+            <!-- FAQ 3 -->
+            <div class="accordion__item glass-card" role="listitem">
+              <button class="accordion__trigger" aria-expanded="false" aria-controls="faq3-content" id="faq3-trigger">
+                <span class="accordion__title">Do you offer ongoing maintenance?</span>
+                <span class="accordion__icon" aria-hidden="true">+</span>
+              </button>
+              <div class="accordion__content" id="faq3-content" role="region" aria-labelledby="faq3-trigger" hidden>
+                <p>Yes! I offer flexible maintenance plans starting at $500/month that include bug fixes, performance monitoring, security updates, and minor feature additions. Most clients opt for the first 3 months post-launch.</p>
+              </div>
+            </div>
+            <!-- FAQ 4 -->
+            <div class="accordion__item glass-card" role="listitem">
+              <button class="accordion__trigger" aria-expanded="false" aria-controls="faq4-content" id="faq4-trigger">
+                <span class="accordion__title">Can you work with my existing team?</span>
+                <span class="accordion__icon" aria-hidden="true">+</span>
+              </button>
+              <div class="accordion__content" id="faq4-content" role="region" aria-labelledby="faq4-trigger" hidden>
+                <p>Absolutely! I regularly collaborate with in-house teams, designers, and other developers. I'm experienced with Git workflows, code reviews, and integrating into existing development processes and CI/CD pipelines.</p>
+              </div>
+            </div>
+            <!-- FAQ 5 -->
+            <div class="accordion__item glass-card" role="listitem">
+              <button class="accordion__trigger" aria-expanded="false" aria-controls="faq5-content" id="faq5-trigger">
+                <span class="accordion__title">What technologies do you specialize in?</span>
+                <span class="accordion__icon" aria-hidden="true">+</span>
+              </button>
+              <div class="accordion__content" id="faq5-content" role="region" aria-labelledby="faq5-trigger" hidden>
+                <p>My core stack includes React/Next.js for frontend, Node.js/Python for backend, and PostgreSQL/MongoDB for databases. I also work with TypeScript, GraphQL, Docker, AWS, and various CSS frameworks. I'm always learning new technologies.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__grid container">
+      <div class="footer__brand">
+        <a href="index.html" class="nav__logo" aria-label="Alex Morgan Home">
+          <span class="nav__logo-icon">⚡</span>
+          <span class="nav__logo-text">Alex<span class="accent">Morgan</span></span>
+        </a>
+        <p class="footer__tagline">Crafting digital experiences that inspire and perform.</p>
+      </div>
+      <div class="footer__links">
+        <h3 class="footer__heading">Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__links">
+        <h3 class="footer__heading">Connect</h3>
+        <ul>
+          <li><a href="https://github.com" target="_blank" rel="noopener noreferrer">🐙 GitHub</a></li>
+          <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">💼 LinkedIn</a></li>
+          <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer">🐦 Twitter</a></li>
+          <li><a href="https://dribbble.com" target="_blank" rel="noopener noreferrer">🏀 Dribbble</a></li>
+        </ul>
+      </div>
+      <div class="footer__newsletter">
+        <h3 class="footer__heading">Stay Updated</h3>
+        <p>Get notified about my latest projects and articles.</p>
+        <form class="footer__form" aria-label="Newsletter signup">
+          <input type="email" placeholder="your@email.com" aria-label="Email address" required />
+          <button type="submit" class="btn btn--primary btn--small">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer__bottom container">
+      <p>&copy; 2026 Alex Morgan. All rights reserved.</p>
+      <p>Designed & Built with ❤️ and ☕</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
